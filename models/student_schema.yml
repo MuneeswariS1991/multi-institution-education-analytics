@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: student_performance_table
+    columns:
+      - name: student_id
+        tests:
+          - unique
+          - not_null
+      - name: score
+        tests:
+          - not_null

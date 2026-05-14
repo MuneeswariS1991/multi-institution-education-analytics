@@ -1,0 +1,7 @@
+
+sources:
+  - name: multi_institution_education_analytics
+    schema: STUDENT_SCHEMA
+    database: EDUCATION_ANALYTICS_DB
+    tables:
+      - name: students_record_target
