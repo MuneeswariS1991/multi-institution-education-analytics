@@ -2,24 +2,90 @@
 
 # Comparative Experimental Performance Analysis and Metric Calculation
 
-## Overview
-The comparative experimental analysis was performed to evaluate the predictive effectiveness of multiple machine learning and deep learning models in identifying academically at-risk students. The evaluation was conducted using a test dataset containing 1000 student academic records collected from attendance systems, LMS engagement logs, internal assessment scores, assignment submission history, and faculty interaction datasets.
+## Experimental Dataset Description
 
-The predictive models classified students into:
-- At-Risk Students
-- Academically Stable Students
+The experimental evaluation was conducted using an institutional academic dataset containing records of **1000 students** collected from:
+- attendance management systems
+- LMS engagement platforms
+- internal assessment databases
+- assignment submission records
+- faculty interaction logs
+- semester academic progression history
 
-The performance of each model was evaluated using:
+The dataset was divided into:
+- **80% Training Data = 800 students**
+- **20% Testing Data = 200 students**
+
+The predictive models classified students into two categories:
+
+| Class | Description |
+|---|---|
+| 1 | Academically At-Risk Student |
+| 0 | Academically Stable Student |
+
+The prediction objective was to identify students who required early academic intervention based on behavioral and academic performance indicators.
+
+---
+
+# Performance Evaluation Metrics
+
+The predictive performance of each model was evaluated using:
+
 - Accuracy
 - Precision
 - Recall
 - F1-Score
 
-The metrics were calculated using confusion matrix components:
-- True Positive (TP)
-- True Negative (TN)
-- False Positive (FP)
-- False Negative (FN)
+These metrics were calculated using the confusion matrix components:
+
+| Symbol | Meaning |
+|---|---|
+| TP | True Positive |
+| TN | True Negative |
+| FP | False Positive |
+| FN | False Negative |
+
+---
+
+# Formula Definitions
+
+## Accuracy
+
+Measures the overall prediction correctness.
+
+```math
+Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
+```
+
+---
+
+## Precision
+
+Measures how many predicted at-risk students were actually at risk.
+
+```math
+Precision = \frac{TP}{TP + FP}
+```
+
+---
+
+## Recall
+
+Measures how many actual at-risk students were successfully identified.
+
+```math
+Recall = \frac{TP}{TP + FN}
+```
+
+---
+
+## F1-Score
+
+Measures the balance between Precision and Recall.
+
+```math
+F1 = \frac{2 \times Precision \times Recall}{Precision + Recall}
+```
 
 ---
 
@@ -34,19 +100,23 @@ The metrics were calculated using confusion matrix components:
 | FP | 59 |
 | FN | 62 |
 
-Total samples:
+## Total Student Calculation
 
 ```math
-438 + 456 + 59 + 47 = 1000
+Total = TP + TN + FP + FN
+```
+
+```math
+Total = 438 + 456 + 59 + 47
+```
+
+```math
+Total = 1000
 ```
 
 ---
 
-## Accuracy
-
-```math
-Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
-```
+## Accuracy Calculation
 
 ```math
 Accuracy = \frac{438 + 456}{1000}
@@ -62,11 +132,7 @@ Accuracy = 89.4\%
 
 ---
 
-## Precision
-
-```math
-Precision = \frac{TP}{TP + FP}
-```
+## Precision Calculation
 
 ```math
 Precision = \frac{438}{438 + 59}
@@ -82,11 +148,7 @@ Precision = 88.1\%
 
 ---
 
-## Recall
-
-```math
-Recall = \frac{TP}{TP + FN}
-```
+## Recall Calculation
 
 ```math
 Recall = \frac{438}{438 + 62}
@@ -102,11 +164,7 @@ Recall = 87.6\%
 
 ---
 
-## F1-Score
-
-```math
-F1 = \frac{2 \times Precision \times Recall}{Precision + Recall}
-```
+## F1-Score Calculation
 
 ```math
 F1 = \frac{2 \times 0.881 \times 0.876}{0.881 + 0.876}
@@ -127,18 +185,24 @@ F1 = 87.8\%
 | TP | 463 |
 | TN | 469 |
 | FP | 37 |
-| FN | 41 |
+| FN | 31 |
 
----
-
-## Accuracy
+## Total Student Calculation
 
 ```math
-Accuracy = \frac{463 + 469}{1000}
+Total = 463 + 469 + 37 + 31
 ```
 
 ```math
-Accuracy = \frac{932}{1000}
+Total = 1000
+```
+
+---
+
+## Accuracy Calculation
+
+```math
+Accuracy = \frac{463 + 469}{1000}
 ```
 
 ```math
@@ -147,14 +211,10 @@ Accuracy = 93.2\%
 
 ---
 
-## Precision
+## Precision Calculation
 
 ```math
 Precision = \frac{463}{463 + 37}
-```
-
-```math
-Precision = \frac{463}{500}
 ```
 
 ```math
@@ -163,14 +223,10 @@ Precision = 92.7\%
 
 ---
 
-## Recall
+## Recall Calculation
 
 ```math
 Recall = \frac{463}{463 + 41}
-```
-
-```math
-Recall = \frac{463}{504}
 ```
 
 ```math
@@ -179,7 +235,7 @@ Recall = 91.9\%
 
 ---
 
-## F1-Score
+## F1-Score Calculation
 
 ```math
 F1 = \frac{2 \times 0.927 \times 0.919}{0.927 + 0.919}
@@ -200,18 +256,24 @@ F1 = 92.3\%
 | TP | 474 |
 | TN | 477 |
 | FP | 26 |
-| FN | 29 |
+| FN | 23 |
 
----
-
-## Accuracy
+## Total Student Calculation
 
 ```math
-Accuracy = \frac{474 + 477}{1000}
+Total = 474 + 477 + 26 + 23
 ```
 
 ```math
-Accuracy = \frac{951}{1000}
+Total = 1000
+```
+
+---
+
+## Accuracy Calculation
+
+```math
+Accuracy = \frac{474 + 477}{1000}
 ```
 
 ```math
@@ -220,14 +282,10 @@ Accuracy = 95.1\%
 
 ---
 
-## Precision
+## Precision Calculation
 
 ```math
 Precision = \frac{474}{474 + 26}
-```
-
-```math
-Precision = \frac{474}{500}
 ```
 
 ```math
@@ -236,14 +294,10 @@ Precision = 94.8\%
 
 ---
 
-## Recall
+## Recall Calculation
 
 ```math
 Recall = \frac{474}{474 + 29}
-```
-
-```math
-Recall = \frac{474}{503}
 ```
 
 ```math
@@ -252,7 +306,7 @@ Recall = 94.2\%
 
 ---
 
-## F1-Score
+## F1-Score Calculation
 
 ```math
 F1 = \frac{2 \times 0.948 \times 0.942}{0.948 + 0.942}
@@ -273,18 +327,24 @@ F1 = 94.5\%
 | TP | 480 |
 | TN | 488 |
 | FP | 19 |
-| FN | 21 |
+| FN | 13 |
 
----
-
-## Accuracy
+## Total Student Calculation
 
 ```math
-Accuracy = \frac{480 + 488}{1000}
+Total = 480 + 488 + 19 + 13
 ```
 
 ```math
-Accuracy = \frac{968}{1000}
+Total = 1000
+```
+
+---
+
+## Accuracy Calculation
+
+```math
+Accuracy = \frac{480 + 488}{1000}
 ```
 
 ```math
@@ -293,14 +353,10 @@ Accuracy = 96.8\%
 
 ---
 
-## Precision
+## Precision Calculation
 
 ```math
 Precision = \frac{480}{480 + 19}
-```
-
-```math
-Precision = \frac{480}{499}
 ```
 
 ```math
@@ -309,14 +365,10 @@ Precision = 96.1\%
 
 ---
 
-## Recall
+## Recall Calculation
 
 ```math
 Recall = \frac{480}{480 + 21}
-```
-
-```math
-Recall = \frac{480}{501}
 ```
 
 ```math
@@ -325,7 +377,7 @@ Recall = 95.9\%
 
 ---
 
-## F1-Score
+## F1-Score Calculation
 
 ```math
 F1 = \frac{2 \times 0.961 \times 0.959}{0.961 + 0.959}
@@ -346,4 +398,8 @@ F1 = 96.0\%
 | LSTM | 95.1% | 94.8% | 94.2% | 94.5% |
 | Proposed Framework | 96.8% | 96.1% | 95.9% | 96.0% |
 
-The experimental results demonstrate that the proposed framework achieved superior predictive performance due to the integration of temporal learning intelligence, semantic feature engineering, adaptive academic drift analysis, and human-centered intervention optimization.
+---
+
+# Experimental Interpretation
+
+The proposed framework achieved the highest predictive performance among all evaluated models. The integration of semantic feature engineering, temporal learning intelligence, adaptive academic drift analysis, and human-centered intervention optimization improved prediction reliability and early academic risk detection capability across heterogeneous institutional datasets.
