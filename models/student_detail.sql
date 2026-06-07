@@ -5,6 +5,7 @@
     alias='students_detail'
 ) }}
 
+
 WITH source_data AS (
 
     SELECT
